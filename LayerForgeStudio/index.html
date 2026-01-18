@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LayerForge Studio – Free 3D Model Downloads, STL Files, 3D Printing</title>
+
+  <!-- Meta description for SEO -->
+  <meta name="description" content="LayerForge Studio offers free 3D model downloads including STL files for 3D printing, chocolate 3D model STL, Raspberry Pi Zero 2 W slim case STL, 3D printable objects, high-quality 3D models, LayerForge Studio STL repository, 3D design files, free STL downloads.">
+
+  <!-- Meta keywords for SEO -->
+  <meta name="keywords" content="3D model download, STL files, free STL download, 3D printing STL, chocolate STL, Raspberry Pi Zero 2 W slim case STL, 3D printable object, 3D design file, LayerForge Studio, 3D printer files, free 3D models, 3D print ready models, 3D printing, DIY 3D projects, high-quality 3D models, 3D design STL, electronics case STL, printable 3D models, STL repository, LayerForge 3D models, hobbyist 3D STL, 3D printing hobby, Maker 3D files, chocolate 3D printing, electronics STL, Pi case STL, 3D printer ready files, free 3D STL, LayerForge STL files, 3D design projects, Raspberry Pi STL, STL bundle download, LayerForge 3D printing, 3D object STL, Raspberry Pi case printable, Maker STL files, 3D model STL download, free 3D designs, 3D printing objects, LayerForge download, 3D printable STL files, chocolate STL download, free chocolate STL, 3D print chocolate, STL 3D printing, LayerForge Studio 3D designs, free 3D STL projects, STL files for 3D printing, Raspberry Pi STL files, electronics 3D STL, 3D printer chocolate model">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body { font-family: Arial, sans-serif; background: #0f0f0f; color: white; margin: 0; padding: 0; }
+    header { background: #111; padding: 20px; text-align: center; }
+    h1 { color: #00ffaa; margin-bottom: 5px; }
+    p.header-desc { margin-top: 0; font-size: 16px; color: #ccc; }
+
+    .main { display: flex; max-width: 1200px; margin: 20px auto; padding: 0 20px; }
+    .sidebar { width: 200px; margin-right: 20px; }
+    .sidebar h3 { color: #00ffaa; margin-bottom: 10px; }
+    .sidebar ul { list-style: none; padding: 0; }
+    .sidebar li { margin-bottom: 10px; cursor: pointer; color: #ccc; }
+    .sidebar li:hover { color: #00ffaa; }
+
+    .content { flex: 1; }
+    .search-bar { display: flex; justify-content: flex-start; margin-bottom: 20px; flex-wrap: wrap; }
+    .search-bar input[type="text"], .search-bar select {
+      padding: 10px; font-size: 16px; border-radius: 5px; border: none; margin-right: 10px; margin-bottom: 10px; width: 200px;
+    }
+    .search-bar button {
+      padding: 10px 15px; font-size: 16px; border: none; border-radius: 5px; background: #00ffaa; color: black; cursor: pointer;
+    }
+
+    .models-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .model img { max-width: 100%; border-radius: 10px; cursor: pointer; transition: transform 0.2s; }
+    .model img:hover { transform: scale(1.05); }
+
+    /* Modal */
+    .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto;
+      background-color: rgba(0,0,0,0.9); }
+    .modal-content { background-color: #1a1a1a; margin: 10% auto; padding: 20px; border-radius: 10px; width: 90%; max-width: 600px; color: white; text-align: center; }
+    .modal-content img { max-width: 100%; border-radius: 10px; margin-bottom: 15px; }
+    .close { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; }
+    .close:hover { color: #00ffaa; }
+
+    .download { display: inline-block; margin-top: 10px; padding: 10px 15px; background: #00ffaa; color: black; text-decoration: none; font-weight: bold; border-radius: 5px; }
+    footer { text-align: center; padding: 15px; color: #aaa; font-size: 14px; margin-top: 40px; }
+
+    /* Hidden SEO text */
+    .seo-hidden { display: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LayerForge Studio – Free 3D Model Downloads</h1>
+    <p class="header-desc">Download free 3D models, STL files, 3D printable objects, chocolate STL 3D model, Raspberry Pi Zero 2 W slim case STL, LayerForge Studio 3D designs, and high-quality 3D models for printing projects.</p>
+  </header>
+
+  <div class="main">
+    <div class="sidebar">
+      <h3>Categories</h3>
+      <ul>
+        <li onclick="filterCategory('all')">All</li>
+        <li onclick="filterCategory('food')">Food</li>
+        <li onclick="filterCategory('tools')">Tools</li>
+        <li onclick="filterCategory('toys')">Toys</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search 3D models..." onkeyup="filterModels()">
+        <select id="categoryFilter" onchange="filterModels()">
+          <option value="all">All Categories</option>
+          <option value="food">Food</option>
+          <option value="tools">Tools</option>
+          <option value="toys">Toys</option>
+        </select>
+        <button onclick="sortModels()">Sort A-Z</button>
+      </div>
+
+      <div class="models-grid" id="modelsContainer">
+
+        <!-- Chocolate Model -->
+        <div class="model" data-name="Chocolate 3D Model" data-category="food">
+          <img src="images/chocolate.png" alt="Chocolate 3D model STL file" onclick="openModal('chocolate')">
+        </div>
+
+        <!-- Raspberry Pi Zero 2 W Slim Case Bundle -->
+        <div class="model" data-name="Raspberry Pi Zero 2 W Slim Case" data-category="tools">
+          <img src="images/pizero2w.png" alt="Raspberry Pi Zero 2 W slim case STL files" onclick="openModal('pizero2w')">
+        </div>
+
+        <!-- Hidden SEO Text -->
+        <div class="seo-hidden">
+          3D model download, STL files, free STL download, 3D printing STL, chocolate STL, Raspberry Pi Zero 2 W slim case STL, 3D printable object, 3D design file, LayerForge Studio, 3D printer files, free 3D models, 3D print ready models, 3D printing, DIY 3D projects, high-quality 3D models, 3D design STL, electronics case STL, printable 3D models, STL repository, LayerForge 3D models, hobbyist 3D STL, 3D printing hobby, Maker 3D files, chocolate 3D printing, electronics STL, Pi case STL, 3D printer ready files, free 3D STL, LayerForge STL files, 3D design projects, Raspberry Pi STL, STL bundle download, LayerForge 3D printing, 3D object STL, Raspberry Pi case printable, Maker STL files, 3D model STL download, free 3D designs, 3D printing objects, LayerForge download, 3D printable STL files, chocolate STL download, free chocolate STL, 3D print chocolate, STL 3D printing, LayerForge Studio 3D designs, free 3D STL projects, STL files for 3D printing, Raspberry Pi STL files, electronics 3D STL, 3D printer chocolate model
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modals -->
+  <div id="chocolateModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('chocolate')">&times;</span>
+      <h2>Chocolate 3D Model</h2>
+      <img src="images/chocolate.png" alt="Chocolate 3D model STL preview">
+      <p>Download this high-quality chocolate 3D model STL file for 3D printing projects.</p>
+      <a class="download" href="models/chocolate.stl" download>Download Chocolate STL</a>
+    </div>
+  </div>
+
+  <div id="pizero2wModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('pizero2w')">&times;</span>
+      <h2>Raspberry Pi Zero 2 W Slim Case Bundle</h2>
+      <img src="images/pizero2w.png" alt="Raspberry Pi Zero 2 W slim case STL preview">
+      <p>Download both top and bottom STL files for Raspberry Pi Zero 2 W slim case.</p>
+      <a class="download" href="models/pizero2wtop.stl" download>Download Top STL</a><br>
+      <a class="download" href="models/pizero2wbottom.stl" download>Download Bottom STL</a>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 LayerForge Studio – Free 3D Model Downloads, STL Files, 3D Models, 3D Printable Objects
+  </footer>
+
+  <script>
+    function filterModels() {
+      const searchInput = document.getElementById('searchInput').value.toLowerCase();
+      const categoryFilter = document.getElementById('categoryFilter').value;
+      const models = document.querySelectorAll('.model');
+
+      models.forEach(model => {
+        const name = model.getAttribute('data-name').toLowerCase();
+        const category = model.getAttribute('data-category');
+        if (name.includes(searchInput) && (categoryFilter === 'all' || categoryFilter === category)) {
+          model.style.display = '';
+        } else {
+          model.style.display = 'none';
+        }
+      });
+    }
+
+    function filterCategory(category) {
+      document.getElementById('categoryFilter').value = category;
+      filterModels();
+    }
+
+    function sortModels() {
+      const container = document.getElementById('modelsContainer');
+      const models = Array.from(container.getElementsByClassName('model'));
+      models.sort((a, b) => a.getAttribute('data-name').toLowerCase().localeCompare(b.getAttribute('data-name').toLowerCase()));
+      models.forEach(model => container.appendChild(model));
+    }
+
+    function openModal(model) {
+      document.getElementById(model + 'Modal').style.display = 'block';
+    }
+
+    function closeModal(model) {
+      document.getElementById(model + 'Modal').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>
+
+
